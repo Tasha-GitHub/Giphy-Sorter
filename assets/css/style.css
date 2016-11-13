@@ -24,11 +24,21 @@ container-fluid{
 
 }
 
+section {
+	margin-left: 0px !important;
+	padding-left: 0px !important;
+}
+
 /*----------------------------------------------*/
+
+footer{
+	margin-top: 30px;
+}
 
 button{ 
 	margin: 5px !important;
 }
+
 
 
 .inputWell{
@@ -37,14 +47,34 @@ button{
 	margin-top: 20px;
 	padding-bottom: 20px;
 	padding-top: 10px;
+	padding-left: 10px !important;
 }	
 .gifWell{
 	border-width: 2px;
 	border-style: solid;
 	margin-top: 20px;
 	padding: 20px;
+	margin-left: 0px;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	align-content: center;
 }
 
 .starterButtonDiv{
 	margin-top: 30px;
+	margin-left: 0px;
+	margin-right: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+img {
+	max-width: 300px;
+	max-height: 200px;
+	margin-bottom: 20px;
+}
+
+.gif {
+	max-width: 300px;
 }

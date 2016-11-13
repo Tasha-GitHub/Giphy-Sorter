@@ -49,7 +49,9 @@ $(document).ready(function(){
 				// console.log(i);
 				gifLoad.push(response.data[i].images.downsized.url);
 				urlLoad.push(response.data[i].images.downsized_still.url);
-				$(".gifWell").append("<div class = \"gif\" data-number=\""+ i + "\" clickstatus = \"false\">"+"<p> rating: " + response.data[i].rating + "</p>" + "<img src=\"" + response.data[i].images.downsized_still.url + "\"" +">");
+				var rating = response.data[i].rating;
+				var imageStill = response.data[i].images.downsized_still.url;
+				$(".gifWell").append("<div class = \"gif\" data-number=\""+ i + "\" clickstatus = \"false\">"+"<p> rating: " + rating + "</p>" + "<img src=\"" + imageStill + "\"" +">");
 			}
 
 			}
