@@ -34,8 +34,17 @@ button{
 .inputWell{
 	border-width: 2px;
 	border-style: solid;
+	margin-top: 20px;
+	padding-bottom: 20px;
+	padding-top: 10px;
 }	
 .gifWell{
 	border-width: 2px;
 	border-style: solid;
+	margin-top: 20px;
+	padding: 20px;
+}
+
+.starterButtonDiv{
+	margin-top: 30px;
 }
