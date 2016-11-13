@@ -23,3 +23,19 @@ container-fluid{
 	padding: 0px;
 
 }
+
+/*----------------------------------------------*/
+
+button{ 
+	margin: 5px !important;
+}
+
+
+.inputWell{
+	border-width: 2px;
+	border-style: solid;
+}	
+.gifWell{
+	border-width: 2px;
+	border-style: solid;
+}
