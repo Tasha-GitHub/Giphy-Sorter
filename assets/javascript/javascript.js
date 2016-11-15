@@ -9,7 +9,7 @@ $(document).ready(function(){
 	for(var i = 0; i < starterButtons.length; i++){
 		//thing about doing this by adding attributes and setting a button to a variable
 		if(starterButtons[i] === "Clear List"){
-			$(".starterButtonDiv").append("<button class = \"btn btn-primary clearButton \" " + "data-name =\""+starterButtons[i]+"\">" + starterButtons[i] + "</button>");
+			$(".starterButtonDiv").append("<button class = \"btn btn-action clearButton \" " + "data-name =\""+starterButtons[i]+"\">" + starterButtons[i] + "</button>");
 		} else{
 		//builds inital buttons for user
 			$(".starterButtonDiv").append("<button class = \"btn btn-primary sorterButton \" " + "data-name =\""+starterButtons[i]+"\">" + starterButtons[i] + "</button>");
@@ -19,10 +19,17 @@ $(document).ready(function(){
 	//adds button when user types it in, has data name value of user input
 	$(".inputWell").on("click", "#submitButton", function(event){
 		event.preventDefault();
+
 		 var value = $("#btnInput").val().trim();
-		 value = value.charAt(0).toUpperCase() + value.slice(1);
-		$(".starterButtonDiv").append("<button class = \"btn btn-primary sorterButton \" " + "data-name =\""+value+"\">" + value + "</button>")
-		$("#btnInput").val("");
+		 //stops users from entering blank values
+		 if(value.length === 0){
+		 	return;
+
+		 } else {
+			 value = value.charAt(0).toUpperCase() + value.slice(1);
+			$(".starterButtonDiv").append("<button class = \"btn btn-primary sorterButton \" " + "data-name =\""+value+"\">" + value + "</button>")
+			$("#btnInput").val("");
+		}
 	});
 
 
@@ -84,7 +91,7 @@ $(document).ready(function(){
 	//clears out buttons in case they dont like them
 	$(".starterButtonDiv").on("click", ".clearButton", function(){
 		$(".starterButtonDiv").empty();
-		$(".starterButtonDiv").append("<button class = \"btn btn-primary clearButton \" " + "data-name =\""+starterButtons[0]+"\">" + starterButtons[0] + "</button>");
+		$(".starterButtonDiv").append("<button class = \"btn btn-action clearButton \" " + "data-name =\""+starterButtons[0]+"\">" + starterButtons[0] + "</button>");
 
 	});
 
